@@ -11,7 +11,11 @@ ul{
 li {
   display: inline-block;
   border: 2px solid white;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   vertical-align: top;
+}
+
+#white{
+  color:white;
 }
