@@ -1,3 +1,16 @@
 body{
   background: purple;
 }
+
+ul{
+  display: inline-block;
+  margin:0px;
+  padding:0px;
+}
+
+li {
+  border: 2px solid white;
+  width: 200px;
+  height: 200px;
+  vertical-align: right;
+}
