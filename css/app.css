@@ -1,21 +1,43 @@
 body{
-  background: purple;
+  background: #696969  ;
+  font-family: "Helvetica Neue";
+  text-align: center;
 }
 
 ul{
-
   margin:0px;
   padding:0px;
 }
 
 li {
   display: inline-block;
-  border: 2px solid white;
+  border: 2px solid #8b1919;
   width: 150px;
   height: 150px;
   vertical-align: top;
+  border-radius: 5px;
+
 }
 
-#white{
-  color:white;
+#clear{
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #8b1919;
+  color: #A9A9A9;
+  box-shadow: 0px 5px 1px 0 #611111;
+  position: center;
+  top: -5px;
+  cursor: pointer
+}
+
+.narrator {
+  padding: 40px;
+  font-size: 20px;
+}
+
+#clear:hover {
+  top: 0;
+  box-shadow: none;
 }

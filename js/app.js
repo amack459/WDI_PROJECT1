@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
       player = "BLACK";
       gameOver = false;
-      narrator.innerHTML = "BLACK'S TURN";
+      narrator.innerHTML = "Start whenever you're ready!";
 });
 //checks all squares to see what square is assigned to what player
 function checkSquares(squares) {
