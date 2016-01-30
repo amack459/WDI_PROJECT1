@@ -39,6 +39,16 @@ window.addEventListener("DOMContentLoaded", function() {
       });
     };
 
+    clear.addEventListener('click', function() {
+      for(var i=0;i<squares.length;i++) {
+        squares[i].innerHTML = "";
+        squares[i].id = "open";
+      }
+
+      player = "BLACK";
+      gameOver = false;
+      narrator.innerHTML = "BLACK'S TURN";
+});
 //checks all squares to see what square is assigned to what player
 function checkSquares(squares) {
   return squares.reduce(function(prev, square) {
