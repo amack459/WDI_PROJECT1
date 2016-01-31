@@ -9,11 +9,12 @@
     //win function
       //5 in a row (vertical, horizontal or diagonal
 
-
+        // $(document).ready(function(){
+        //   });       
 window.addEventListener("DOMContentLoaded", function() {
 
       var narrator = document.getElementsByClassName("narrator")[0];
-      var player = "BLACK";
+      var player = "b"
       var gameOver = false;
 
       var squares = document.getElementsByClassName("board");
@@ -23,7 +24,7 @@ window.addEventListener("DOMContentLoaded", function() {
         squares[i].addEventListener("click", function(){
           if(!this.innerHTML && !gameOver){
             this.innerHTML = player;
-            this.id= player;
+            this.className = "board " + player;
 
             if(checkForWin()) {
               narrator.innerHTML = "Looks like we're done! " + player + " has won!";
@@ -32,7 +33,7 @@ window.addEventListener("DOMContentLoaded", function() {
               narrator.innerHTML = "You're BOTH losers. Try again!";
               gameOver = true; 
             } else {
-              player = player === "BLACK" ? "WHITE" : "BLACK";
+              player = player === "b" ? "w" : "b";
               narrator.innerHTML = player + "'s turn";
             };
           }; 
@@ -45,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function() {
         squares[i].id = "open";
       }
 
-      player = "BLACK";
+      player = "b";
       gameOver = false;
       narrator.innerHTML = "Start whenever you're ready!";
 });
@@ -94,8 +95,9 @@ function checkDiags() {
 });
 
 
+
 //***Boss Product**
   //reset button
   //function for best of 3 or 5
   //different levels of difficulty (easy, medium, hard)
-  //play musiccheckSquares
+  //play music once you've won best of 5

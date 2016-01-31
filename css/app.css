@@ -2,21 +2,41 @@ body{
   background: #696969  ;
   font-family: "Helvetica Neue";
   text-align: center;
+  width:1000px; 
+  height: 1000px;
+}
+
+h1{
+  font-family:  "Helvetica Neue";
+  font-size: 50px;
 }
 
 ul{
-  margin:0px;
-  padding:0px;
+  margin:0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
 }
 
 li {
   display: inline-block;
   border: 2px solid #8b1919;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   vertical-align: top;
-  border-radius: 5px;
+  border-radius: 0px;
+}
 
+.board {
+  border: 0;
+  z-index: 1000;
+
+}
+
+.two{
+  position: relative;
+  top: -995px;
+  left: 5px;
+  border: none;
+  z-index: -1000;
 }
 
 #clear{
@@ -27,7 +47,7 @@ li {
   background-color: #8b1919;
   color: #A9A9A9;
   box-shadow: 0px 5px 1px 0 #611111;
-  position: center;
+
   top: -5px;
   cursor: pointer
 }
