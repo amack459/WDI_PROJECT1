@@ -28,14 +28,15 @@ window.addEventListener("DOMContentLoaded", function() {
             this.className = "board " + player;
 
             if(checkForWin()) {
-              narrator.innerHTML = "Looks like we're done! " + player + " has won!";
+              narrator.innerHTML = "Looks like we're done! " + "url(go_" + player + ".png)" + " has won!";
               gameOver =true;
             } else if(checkForTie()) {  
               narrator.innerHTML = "You're BOTH losers. Try again!";
               gameOver = true; 
             } else {
               player = player === "b" ? "w" : "b";
-              narrator.innerHTML = player + "'s turn";
+              narrator.style.backgroundImage = "url(go_" + player + ".png)";
+              narrator.innerHTML = "It's your turn"
             };
           }; 
       });

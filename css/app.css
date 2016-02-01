@@ -4,10 +4,18 @@ body{
   text-align: center;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
 h1{
   font-family:  "Papyrus";
   font-size: 50px;
-  margin: 50px;
+}
+
+h3 {
+  padding-top: 125px;
 }
 
 ul{
@@ -16,6 +24,7 @@ ul{
 }
 
 .container {
+  float: left;
   position: relative;
   margin: 40px auto;
   height: 500px;
@@ -76,9 +85,13 @@ ul{
 }
 
 .narrator {
+  text-align: center;
   padding: 40px;
   font-size: 20px;
   font-family: "Papyrus";
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-bottom: -100px;
 }
 
 #clear:hover {
