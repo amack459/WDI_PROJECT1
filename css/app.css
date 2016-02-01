@@ -1,14 +1,13 @@
 body{
-  background: #696969  ;
+  background: #8b1919  ;
   font-family: "Helvetica Neue";
   text-align: center;
-  width:1000px; 
-  height: 1000px;
 }
 
 h1{
   font-family:  "Helvetica Neue";
   font-size: 50px;
+  margin: 50px;
 }
 
 ul{
@@ -16,25 +15,48 @@ ul{
   padding:0px 0px 0px 0px;
 }
 
-li {
-  display: inline-block;
-  border: 2px solid #8b1919;
-  width: 100px;
-  height: 100px;
-  vertical-align: top;
-  border-radius: 0px;
+.container {
+  position: relative;
+  margin: 40px auto;
+  height: 500px;
+  width:  500px;
+
 }
 
-.board {
-  border: 0;
-  z-index: 1000;
+.one li{
+  display: inline-block;
+  border: none;
+  width: 50px;
+  height: 50px;
+  vertical-align: top;
+  border-radius: 0px;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+  line-height: 50px;
+}
 
+.two li {
+  display: inline-block;
+  border: 2px solid #8b1919;
+  width: 50px;
+  height: 50px;
+  vertical-align: top;
+  border-radius: 0px;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  line-height: 50px;
+  background-color:#696969; 
+}
+
+.one {
+  z-index: 1000;
+  position: absolute;
 }
 
 .two{
-  position: relative;
-  top: -995px;
-  left: 5px;
+  position: absolute;
+  top:26px;
+  left: 26px;
   border: none;
   z-index: -1000;
 }
@@ -44,12 +66,12 @@ li {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: #8b1919;
-  color: #A9A9A9;
+  background-color: #696969;
+  color: #8b1919;
   box-shadow: 0px 5px 1px 0 #611111;
-
   top: -5px;
-  cursor: pointer
+  cursor: pointer;
+  outline: none;
 }
 
 .narrator {
@@ -60,4 +82,9 @@ li {
 #clear:hover {
   top: 0;
   box-shadow: none;
+}
+
+.board {
+  background-repeat: no-repeat;
+  background-position: center;
 }

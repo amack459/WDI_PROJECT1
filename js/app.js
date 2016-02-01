@@ -9,8 +9,9 @@
     //win function
       //5 in a row (vertical, horizontal or diagonal
 
-        // $(document).ready(function(){
-        //   });       
+// $(document).ready(function(){
+
+// });       
 window.addEventListener("DOMContentLoaded", function() {
 
       var narrator = document.getElementsByClassName("narrator")[0];
@@ -22,8 +23,8 @@ window.addEventListener("DOMContentLoaded", function() {
        
       for(var i=0; i<squares.length;i++){
         squares[i].addEventListener("click", function(){
-          if(!this.innerHTML && !gameOver){
-            this.innerHTML = player;
+          if(!this.style.backgroundImage && !gameOver){
+            this.style.backgroundImage = "url(go_" + player + ".png)";
             this.className = "board " + player;
 
             if(checkForWin()) {
@@ -42,11 +43,11 @@ window.addEventListener("DOMContentLoaded", function() {
 
     clear.addEventListener('click', function() {
       for(var i=0;i<squares.length;i++) {
-        squares[i].innerHTML = "";
+        squares[i].style.backgroundImage = "";
         squares[i].id = "open";
       }
 
-      player = "b";
+      
       gameOver = false;
       narrator.innerHTML = "Start whenever you're ready!";
 });
