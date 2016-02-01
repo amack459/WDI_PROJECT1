@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     clear.addEventListener('click', function() {
       for(var i=0;i<squares.length;i++) {
-        squares[i].style.backgroundImage = "";
+        squares[i].style.backgroundImage = " ";
         squares[i].id = "open";
       }
 
@@ -54,6 +54,7 @@ window.addEventListener("DOMContentLoaded", function() {
 function checkSquares(squares) {
   return squares.reduce(function(prev, square) {
     return prev && square.style.backgroundImage === 'url("go_' + player + '.png")';
+    console.log(square.style.backgroundImage)
   }, true);
 };
 
@@ -193,6 +194,31 @@ function checkDiags() {
           checkSquares([squares[22],squares[32],squares[42],squares[52],squares[62]]) ||
           checkSquares([squares[3],squares[13],squares[23],squares[33],squares[43]]) ||
           checkSquares([squares[13],squares[23],squares[33],squares[43],squares[53]]) ||
+          checkSquares([squares[4],squares[12],squares[20],squares[28],squares[36]]) ||
+          checkSquares([squares[5],squares[13],squares[21],squares[29],squares[37]]) ||
+          checkSquares([squares[13],squares[21],squares[29],squares[37],squares[45]]) ||
+          checkSquares([squares[6],squares[14],squares[22],squares[30],squares[38]]) ||
+          checkSquares([squares[14],squares[22],squares[30],squares[38],squares[46]]) ||
+          checkSquares([squares[22],squares[30],squares[38],squares[46],squares[54]]) ||
+          checkSquares([squares[7],squares[15],squares[23],squares[31],squares[39]]) ||
+          checkSquares([squares[15],squares[23],squares[31],squares[39],squares[47]]) ||
+          checkSquares([squares[23],squares[31],squares[39],squares[47],squares[55]]) ||
+          checkSquares([squares[31],squares[39],squares[47],squares[55],squares[63]]) ||
+          checkSquares([squares[8],squares[16],squares[24],squares[32],squares[40]]) ||
+          checkSquares([squares[16],squares[24],squares[32],squares[40],squares[48]]) ||
+          checkSquares([squares[24],squares[32],squares[40],squares[48],squares[56]]) ||
+          checkSquares([squares[32],squares[40],squares[48],squares[56],squares[64]]) ||
+          checkSquares([squares[40],squares[48],squares[56],squares[64],squares[72]]) ||
+          checkSquares([squares[17],squares[25],squares[33],squares[41],squares[49]]) ||
+          checkSquares([squares[25],squares[33],squares[41],squares[49],squares[57]]) ||
+          checkSquares([squares[33],squares[41],squares[49],squares[57],squares[65]]) ||
+          checkSquares([squares[41],squares[49],squares[57],squares[65],squares[73]]) ||
+          checkSquares([squares[26],squares[34],squares[42],squares[50],squares[58]]) ||
+          checkSquares([squares[34],squares[42],squares[50],squares[58],squares[66]]) ||
+          checkSquares([squares[42],squares[50],squares[58],squares[64],squares[74]]) ||
+          checkSquares([squares[35],squares[43],squares[51],squares[59],squares[67]]) ||
+          checkSquares([squares[43],squares[51],squares[59],squares[67],squares[75]]) ||
+          checkSquares([squares[44],squares[52],squares[60],squares[68],squares[76]]) ||
           checkSquares([squares[4],squares[14],squares[24],squares[34],squares[44]]);
 };
 
