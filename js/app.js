@@ -16,6 +16,7 @@ window.addEventListener("DOMContentLoaded", function() {
       var narrator = document.getElementsByClassName("narrator")[0];
       var player = "b"
       var gameOver = false;
+      var clear = document.getElementById("clear");
 
       var squares = document.getElementsByClassName("board");
       
@@ -42,14 +43,16 @@ window.addEventListener("DOMContentLoaded", function() {
 
     clear.addEventListener('click', function() {
       for(var i=0;i<squares.length;i++) {
-        squares[i].style.backgroundImage = " ";
-        squares[i].id = "open";
+        if(squares[i].className !== 'board') {
+          console.log("clicked")
+          squares[i].style.backgroundImage = "";
+        }
       }
 
-      
       gameOver = false;
       narrator.innerHTML = "Start whenever you're ready!";
 });
+
 //checks all squares to see what square is assigned to what player
 function checkSquares(squares) {
   return squares.reduce(function(prev, square) {
@@ -70,7 +73,6 @@ function checkForTie(){
 
 function checkForWin() {
   return (checkRows() || checkColumns() || checkDiags());
-  console.log( " wins!")
 };
 
 function checkRows() {
