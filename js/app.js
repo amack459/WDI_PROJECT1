@@ -28,7 +28,8 @@ window.addEventListener("DOMContentLoaded", function() {
             this.className = "board " + player;
 
             if(checkForWin()) {
-              narrator.innerHTML = "Looks like we're done! " + "url(go_" + player + ".png)" + " has won!";
+              narrator.style.backgroundImage = "url(go_" + player + ".png)";
+              narrator.innerHTML = "Looks like you've won! Grab a tea or coffee from the lobby...on me!!";
               gameOver =true;
             } else if(checkForTie()) {  
               narrator.innerHTML = "You're BOTH losers. Try again!";
@@ -58,7 +59,6 @@ window.addEventListener("DOMContentLoaded", function() {
 function checkSquares(squares) {
   return squares.reduce(function(prev, square) {
     return prev && square.style.backgroundImage === 'url("go_' + player + '.png")';
-    console.log(square.style.backgroundImage)
   }, true);
 };
 
