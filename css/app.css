@@ -23,6 +23,10 @@ ul{
   padding:0px 0px 0px 0px;
 }
 
+p {
+  padding-bottom: 60px;
+}
+
 .container {
   float: left;
   position: relative;
