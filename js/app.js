@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", function() {
       narrator.innerHTML = "Start whenever you're ready!";
 });
 
-//checks all squares to see what square is assigned to what player
+//Callback function that checks all squares and assigns them to a player. 
 function checkSquares(squares) {
   return squares.reduce(function(prev, square) {
     return prev && square.style.backgroundImage === 'url("go_' + player + '.png")';

@@ -2,6 +2,7 @@ body{
   background: #8b1919  ;
   font-family: "Papyrus";
   text-align: center;
+  color:#D3D3D3;
 }
 
 main {
@@ -84,7 +85,7 @@ p {
   border-radius: 5px;
   border: none;
   background-color: #696969;
-  color: #8b1919;
+  color: #D3D3D3;
   box-shadow: 0px 5px 1px 0 #611111;
   top: -5px;
   cursor: pointer;
@@ -109,4 +110,16 @@ p {
 .board {
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 640px) {
+ one li{
+   display: block;
+  }
+
+  two li {
+    display: block;
+  }
 }
