@@ -63,7 +63,7 @@ function checkSquares(squares) {
 };
 
 
-checks all squares to make sure there isn't an empty. If there isn't and the checkForWin() doesn't detect a winner. Then, it's a tie
+// checks all squares to make sure there isn't an empty. If there isn't and the checkForWin() doesn't detect a winner. Then, it's a tie
 function checkForTie(){
     var tie = true;
     for(var i=0; i<squares.length;i++) {
