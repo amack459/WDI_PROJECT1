@@ -46,6 +46,7 @@ window.addEventListener("DOMContentLoaded", function() {
     clear.addEventListener('click', function() {
       for(var i=0;i<squares.length;i++) {
         if(squares[i].className !== 'board') {
+          console.log("clicked")
           squares[i].style.backgroundImage = "";
         }
       }
@@ -57,8 +58,8 @@ window.addEventListener("DOMContentLoaded", function() {
 //Callback function that checks all squares and assigns them to a player. 
 function checkSquares(squares) {
   return squares.reduce(function(prev, square) {
-    checkForWin();
     return prev && square.style.backgroundImage === 'url("go_' + player + '.png")';
+    checkForWin();
   }, true);
 };
 
