@@ -1,4 +1,4 @@
-//***Minimum Viable Product***
+  //***Minimum Viable Product***
   //Make a board that allows 2 players to make moves 
   //Display rules
     //lis to set up board 
@@ -29,7 +29,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
             if(checkForWin()) {
               narrator.style.backgroundImage = "url(go_" + player + ".png)";
-              narrator.innerHTML = "Looks like you've won! Grab a tea or coffee from the lobby...on me!!";
+              narrator.innerHTML = "Congratulations, you're the winner!!!";
               gameOver =true;
             } else if(checkForTie()) {  
               narrator.innerHTML = "You're BOTH losers. Try again!";
@@ -90,7 +90,6 @@ function checkRows() {
           checkSquares([squares[13],squares[14],squares[15],squares[16],squares[17]]) ||
           checkSquares([squares[18],squares[19],squares[20],squares[14],squares[22]]) ||
           checkSquares([squares[19],squares[20],squares[21],squares[22],squares[23]]) ||
-          checkSquares([squares[20],squares[21],squares[22],squares[23],squares[24]]) ||
           checkSquares([squares[21],squares[22],squares[23],squares[24],squares[25]]) ||
           checkSquares([squares[22],squares[23],squares[24],squares[25],squares[26]]) ||
           checkSquares([squares[27],squares[28],squares[29],squares[30],squares[31]]) ||
